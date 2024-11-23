@@ -1,0 +1,71 @@
+link[rel="icon"] {
+    width: 16px; /* Устанавливаем нужный размер */
+    height: 16px; /* Устанавливаем нужный размер */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    color: #1f8ef1;
+}
+
+.converter div {
+    margin-bottom: 15px;
+}
+
+input[type="number"], select {
+    padding: 10px;
+    font-size: 1rem;
+    margin-right: 10px;
+    width: 200px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#conversionResult {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.chart-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+canvas {
+    max-width: 100%;
+}
+
