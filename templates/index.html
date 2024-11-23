@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <link rel="icon" href="/templates/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+
+    <header>
+        <h1>Currency Converter</h1>
+    </header>
+
+    <div class="container">
+
+        <!-- Конвертер валют -->
+        <div class="converter">
+            <h2>Конвертер Валют</h2>
+            <div>
+                <label for="currencyFrom">Виберіть валюту:</label>
+                <select id="currencyFrom">
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="UAH">UAH</option>
+                    <option value="BTC">BTC</option>
+                    <option value="USDT">USDT</option>
+                </select>
+            </div>
+            <div>
+                <input type="number" id="amount" placeholder="Введіть суму">
+            </div>
+            <div>
+                <label for="currencyTo">Перетворити на:</label>
+                <select id="currencyTo">
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="UAH">UAH</option>
+                    <option value="BTC">BTC</option>
+                    <option value="USDT">USDT</option>
+                </select>
+            </div>
+            <div>
+                <button id="convertBtn">Convert</button>
+            </div>
+            <div id="conversionResult"></div>
+        </div>
+
+        <!-- График для валют -->
+        <div class="chart-container">
+            <h2>Курси валют (USD, EUR, UAH)</h2>
+            <div>
+                <label for="currencySelector1">Виберіть валюту:</label>
+                <select id="currencySelector1">
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="UAH">UAH</option>
+                </select>
+            </div>
+            <canvas id="currencyChart1" width="500" height="200"></canvas>
+        </div>
+
+        <!-- График для криптовалют -->
+        <div class="chart-container">
+            <h2>Курси Криптовалюти (BTC, USDT)</h2>
+            <div>
+                <label for="currencySelector2">Виберіть Криптовалюту:</label>
+                <select id="currencySelector2">
+                    <option value="BTC">BTC</option>
+                    <option value="USDT">USDT</option>
+                </select>
+            </div>
+            <canvas id="currencyChart2" width="500" height="200"></canvas>
+        </div>
+        <div>
+           <h4>Як працюють числа:</h4>
+                <p>
+                    1.00: Це означає, що 1 USDT дорівнює 1 долару США.<br/>
+                    1.01: Це означає, що 1 USDT дорівнює 1.01 долара (тобто трохи більше 1 долара).<br/>
+                    0.99: Це означає, що 1 USDT дорівнює 0.99 долара (трохи менше ніж 1 долар).
+                </p>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
